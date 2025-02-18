@@ -1,0 +1,24 @@
+<button class="home" routerLink="/home">Home</button>
+
+<div class="body">
+  <div class="cadastro">
+      <h2>Cadastrar Membro</h2>
+        <form (ngSubmit)="envioCadastro()">
+          <input type="text" name="nome" [(ngModel)]="nome" placeholder="Nome" />
+          <input type="text" name="endereco" [(ngModel)]="endereco" placeholder="Endereço" />
+          <input type="text" name="telefone" [(ngModel)]="telefone" placeholder="Telefone" />
+          <input type="text" name="email" [(ngModel)]="email" placeholder="Email" />
+          <input type="text" name="cpf" [(ngModel)]="cpf" placeholder="123.456.789-00" title="O CPF deve estar no formato 123.456.789-00" required>
+          <label for="tipoCon">Escolha o plano</label>
+          <select name="tipocCon" id="tipoCon" [(ngModel)]="tipo_contrato" placeholder="Tipo de Contrato">
+            <option value="Plano Bronze">Plano Bronze</option>
+            <option value="Plano Prata">Plano Prata</option>
+            <option value="Plano Ouro">Plano Ouro</option>
+            <option value="Plano Platinum">Plano Platinum</option>
+          </select>
+          <input type="text" name="statusPag" [(ngModel)]="status_pagamento" name="status_pagamento" id="status_pagamento" placeholder="Digite o status do pagamento">
+          <button type="submit">Cadastrar Novo Membro</button>
+          <p *ngIf="mensagemCad" [ngClass]="{'success': sucesso, 'error': !sucesso}">{{ mensagemCad }}</p>
+        </form>
+      </div>
+</div>

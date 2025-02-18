@@ -1,0 +1,85 @@
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    background-image: url(/musculo.jpeg); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.bronze, .prata, .ouro, .diamante, .platina {
+    flex: 1 1 200px; /* Responsivo para garantir que os itens se ajustem ao tamanho da tela */
+    max-width: 250px;
+    background: linear-gradient(to bottom, #4a4a4a, #2f2f2f); /* Gradiente suave */
+    color: #ffffff;
+    border-radius: 10px;
+    border: 2px solid #1c1c1c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bronze:hover, .prata:hover, .ouro:hover, .diamante:hover, .platina:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+    background: linear-gradient(to bottom, #5a5a5a, #3a3a3a);
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #1c1c1c;
+}
+
+ul {
+    list-style-type: none;
+    padding: 15px;
+    margin: 0;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.home {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #464646;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .home:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

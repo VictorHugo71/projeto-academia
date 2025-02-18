@@ -1,0 +1,112 @@
+.background {
+  background: url(/musculo.jpeg) no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: rgb(240, 240, 240);
+  padding: 10px 20px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 8px darkblue;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+input {
+  height: 40px; /* Altura do input */
+  padding: 0px 10px; /* Espaçamento interno */
+  text-align: center; /* Alinha o texto (incluindo o placeholder) ao centro horizontalmente */
+  font-size: 16px; /* Tamanho da fonte */
+  background: transparent;
+  border: none;
+  outline: none;
+  flex: 1;
+  line-height: 40px; /* Igual à altura do input */
+}
+
+#nome, #email, #tipo_contrato, #valor, #status_pagamento {
+  background-color: rgb(230, 230, 230);
+
+}
+
+input::placeholder {
+  text-align: center;
+}
+
+button mat-icon {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h3, h4 {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px;
+  margin: 8px;
+}
+
+label {
+  font-size: 20px;
+  padding: 5px;
+  margin: 5px;
+  font-weight: bold;
+}
+
+.detalhes-membro {
+  background-color: rgb(240, 240, 240);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px darkblue;
+  width: 300px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+button {
+  padding: 8px;
+  margin: 5px;
+  color: blue;
+}
+
+.home {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #464646;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menssagem {
+  background-color: white;
+  font-size: 20px;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+}

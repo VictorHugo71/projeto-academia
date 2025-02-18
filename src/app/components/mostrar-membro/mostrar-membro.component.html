@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+
+<button class="home" routerLink="/home">Home</button>
+<div class="background">
+  <div class="search-container">
+    <form (ngSubmit)="pesquisarMembro()">
+      <input type="text" [(ngModel)]="cpf" name="cpf" placeholder="Digite o CPF do membro" required/>
+      <button mat-icon-button>
+        <span class="material-symbols-outlined">
+          search
+          </span>
+      </button>
+    </form>
+  </div>
+  <div *ngIf="membro; else naoEncontrado" class="detalhes-membro">
+    <h3>Detalhes do Membro</h3>
+    <div class="info-container">
+      <div class="info-item">
+        <p><strong>Nome:</strong> {{ membro.nome }}</p>
+      </div>
+      <div class="info-item">
+        <p><strong>Email:</strong> {{ membro.email }}</p>
+      </div>
+      <div class="info-item">
+        <p><strong>CPF:</strong> {{ membro.cpf }}</p>
+      </div>
+      <div class="info-item">
+        <p><strong>Plano:</strong> {{ membro.tipo_contrato }}</p>
+      </div>
+      <div class="info-item">
+        <p><strong>Valor:</strong> {{ membro.valor | currency: 'BRL' }}</p>
+      </div>
+      <div class="info-item">
+        <p><strong>Status Pagamento:</strong> {{ membro.status_pagamento }}</p>
+      </div>
+    </div>
+
+    <div class="action-buttons">
+      <button (click)="toggleEditar()">Editar Membro</button>
+      <button (click)="excluirMembro()">Excluir Membro</button>
+    </div>
+
+    <div *ngIf="modoEdicao" class="form-edicao">
+      <h4>Editar Dados do Membro</h4>
+      <form (ngSubmit)="atualizarMembro()">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input id="nome" [(ngModel)]="membro.nome" name="nome" type="text" placeholder="Atualize o nome" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input id="email" [(ngModel)]="membro.email" name="email" type="email" placeholder="Atualize o email" />
+        </div>
+
+        <div class="form-group">
+          <label for="tipo_contrato">Plano:</label>
+          <input id="tipo_contrato" [(ngModel)]="membro.tipo_contrato" name="tipo_contrato" type="text" placeholder="Atualize o plano" />
+        </div>
+
+        <div class="form-group">
+          <label for="valor">Valor:</label>
+          <input id="valor" [(ngModel)]="membro.valor" name="valor" type="number" placeholder="Atualize o valor" />
+        </div>
+
+        <div class="form-group">
+          <label for="status_pagamento">Status Pagamento:</label>
+          <input id="status_pagamento" [(ngModel)]="membro.status_pagamento" name="status_pagamento" type="text" placeholder="Atualize o status de pagamento" />
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit">Salvar Alterações</button>
+          <button type="button" (click)="cancelarEdicao()">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <ng-template #naoEncontrado>
+    <p *ngIf="mensagemErro" class="menssagem">{{ mensagemErro }}</p>
+  </ng-template>
+  </div>

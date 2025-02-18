@@ -1,0 +1,93 @@
+.body {
+  background: url(/musculo.jpeg) no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  padding: 150px;
+}
+.cadastro {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    margin-top: 0px;
+
+  }
+  
+  .cadastro h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .cadastro form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .cadastro input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+  }
+  
+  .cadastro input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  }
+  
+  .cadastro button {
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .cadastro button:hover {
+    background-color: #0056b3;
+  }
+  
+  .cadastro p {
+    text-align: center;
+    font-size: 14px;
+    color: #28a745; /* Verde para mensagens de sucesso */
+    margin-top: 10px;
+  }
+  
+  .cadastro p.error {
+    color: #dc3545; /* Vermelho para mensagens de erro */
+  }
+  
+  .home {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #464646;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .home:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

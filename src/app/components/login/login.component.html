@@ -1,0 +1,32 @@
+<!--Créditos - From Uiverse.io by MikeAndrewDesigner--> 
+<main class="container-bemVindo">
+    <h1>
+        Bem vindo!
+    </h1>
+    <button (click)="alternarVisibilidade2();" class="btn_cad" >Cadastrar</button>
+    <button (click)="alternarVisibilidade1();" class="btn_log" >Login</button>
+    <div *ngIf="mostrarItens2">
+        <div class="cadastro">
+            <h1 class="h1">Cadastrar</h1>
+            <form (ngSubmit)="envioCadastro()">
+                <input type="text" name="nome" id="nome" [(ngModel)]="nome" placeholder="Digite seu nome" required>
+                <input pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" placeholder="Email" id="email" name="email" type="text" [(ngModel)]="email" required>
+                <input placeholder="Password" id="password" name="password" type="password" [(ngModel)]="senha" required>
+                <input value="Cadastrar" class="btn" type="submit">
+                <p *ngIf="mensagemCad">{{mensagemCad}}</p>
+            </form>
+        </div>
+    </div>
+    <div *ngIf="mostrarItens1">
+        <div class="login">
+            <h1 class="h1">Login</h1>
+            <form (ngSubmit)="login()">
+                <input pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" placeholder="Email" id="email" name="email" [(ngModel)]="email" type="text" required>
+                <input placeholder="Password" id="senha" name="senha" [(ngModel)]="senha" type="password" required>
+                <p class="forgot">Esqueceu sua senha? <a href="">clique aqui!</a></p>
+                <input value="Login" class="btn" type="submit">
+            </form>
+            <p *ngIf="mensagemLog">{{mensagemLog}}</p>
+        </div>
+    </div>
+</main>
