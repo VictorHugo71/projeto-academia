@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class FuncionarioService {
   // URL do seu endpoint PHP para cadastro de funcionários
-  private apiUrl = 'http://localhost/estudo_php/banco-academia/cadastrarFuncionario.php'; 
+  private apiUrl = 'http://localhost/projeto-academia/banco-academia/cadastrarFuncionario.php'; 
 
   constructor(private http: HttpClient) { }
 

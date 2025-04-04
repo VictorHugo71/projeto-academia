@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost/estudo_php/banco-academia/loginFuncionario.php'; // URL para o login
+  private apiUrl = 'http://localhost/projeto-academia/banco-academia/loginFuncionario.php'; // URL para o login
 
   constructor(private http: HttpClient, private router: Router) {}
 

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class MembroCadastroService {
 
   //private apiUrlCad = 'http://localhost/estudo_php/banco-academia/cadastroMembro.php'; // URL do seu arquivo PHP
-  private apiUrlCad = 'http://localhost/estudo_php/banco-academia/plano.php';
+  private apiUrlCad = 'http://localhost/projeto-academia/banco-academia/cadastroMembro.php';
   constructor(private http: HttpClient) {}
 
   // Método para enviar os dados no modo POST

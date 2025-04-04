@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class MostrarMembroService {
-  private apiUrl = 'http://localhost/estudo_php/banco-academia/mostrarMembros.php'; // URL do seu arquivo PHP
+  private apiUrl = 'http://localhost/projeto-academia/banco-academia/mostrarMembros.php'; // URL do seu arquivo PHP
 
   constructor(private http: HttpClient) {}
 
